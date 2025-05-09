@@ -19,7 +19,6 @@
 import { ref } from 'vue';
 
 
-
     const texto = ref('')
     const listas = ref([])
 

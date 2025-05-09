@@ -2,11 +2,13 @@
   <ContadorTeste/>
   <TextoDinaminco/>
   <ListadeTarefas/>
+  <SeletorCores/>
 </template>
 
 <script>
 import ContadorTeste from './components/ContadorTeste'
 import ListadeTarefas from './components/ListadeTarefas.vue';
+import SeletorCores from './components/SeletorCores.vue';
 import TextoDinaminco from './components/TextoDinaminco.vue';
 
 export default {
@@ -14,7 +16,8 @@ export default {
   components: {
     ContadorTeste,
     TextoDinaminco,
-    ListadeTarefas
+    ListadeTarefas,
+    SeletorCores
   }
 }
 </script>
