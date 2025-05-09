@@ -1,12 +1,18 @@
 <template>
     <div>
         <h1>Seletore de Cores</h1>
-        <span>Vermelho: </span>
-        <input type="number" v-model.number="nVerm"> <br>
-        <span>Verde: </span>
-        <input type="number" v-model.number="nVerde"> <br>
-        <span>Azul: </span>
-        <input type="number" v-model.number="nAzul"> <br>
+        <div>
+            <label for="vermelho">Vermelho: </label>
+            <input type="number" v-model.number="nVerm" min="0" max="255"> 
+        </div>
+        <div>
+            <label for="verder">Verde: </label>
+            <input type="number" v-model.number="nVerde" min="0" max="255"> 
+        </div>
+        <div>
+            <label for="azul">Azul: </label>
+            <input type="number" v-model.number="nAzul" min="0" max="255"> 
+        </div>
 
         <div class="cor" :style="{backgroundColor: rgbColor}">Resultado:  {{ nVerm }} {{ nVerde }} {{ nAzul }}</div>
     </div>
@@ -24,7 +30,13 @@ import { computed, ref } from 'vue';
    </script>
 
 <style scoped>
-
+.cor {
+     width: 120px;
+     height: 120px; 
+     border: 1px solid #ccc; 
+     margin-top: 20px;
+     margin: auto;
+}
 
 
 </style>
