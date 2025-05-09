@@ -1,22 +1,22 @@
 <template>
-  <ContadorTeste/>
+  <!-- <ContadorTeste/>
   <TextoDinaminco/>
-  <ListadeTarefas/>
+  <ListadeTarefas/> -->
   <SeletorCores/>
 </template>
 
 <script>
-import ContadorTeste from './components/ContadorTeste'
-import ListadeTarefas from './components/ListadeTarefas.vue';
+//import ContadorTeste from './components/ContadorTeste'
+//import ListadeTarefas from './components/ListadeTarefas.vue';
 import SeletorCores from './components/SeletorCores.vue';
-import TextoDinaminco from './components/TextoDinaminco.vue';
+//import TextoDinaminco from './components/TextoDinaminco.vue';
 
 export default {
   name: 'App',
   components: {
-    ContadorTeste,
-    TextoDinaminco,
-    ListadeTarefas,
+    // ContadorTeste,
+    // TextoDinaminco,
+    // ListadeTarefas,
     SeletorCores
   }
 }
