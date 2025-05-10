@@ -16,6 +16,7 @@
 
         <div class="cor" :style="{backgroundColor: rgbColor}"></div>
         <p style="margin-top: 10px;">Codigo Hexadecimal: {{ hexColor }}</p>
+        <button @click="copiarHex">Copiar Hex</button>
     </div>
 </template>
     <script setup>
@@ -36,9 +37,61 @@ import { computed, ref } from 'vue';
         }
         return `#${toHex(nVerm.value)}${toHex(nVerde.value)}${toHex(nAzul.value)}`
     })
+
+    const copiarHex = () => {
+        navigator.clipboard.writeText(hexColor.value)
+        .then(() => {
+            alert('Codigo hexadecimal copiado para area de transferencia!')
+        })
+        .catch( err => {
+            console.error('Falha ao copiar para area de transferencia: ', err)
+            alert('Não foi possivel copiar para area de transferencia.')
+        })
+    }
    </script>
 
 <style scoped>
+div {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
 .cor {
      width: 120px;
      height: 120px; 
