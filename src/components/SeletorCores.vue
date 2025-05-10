@@ -15,6 +15,7 @@
         </div>
 
         <div class="cor" :style="{backgroundColor: rgbColor}"></div>
+        <p style="margin-top: 10px;">Codigo Hexadecimal: {{ hexColor }}</p>
     </div>
 </template>
     <script setup>
@@ -27,6 +28,14 @@ import { computed, ref } from 'vue';
     const rgbColor = computed(() => {
         return `rgb(${nVerm.value},${nVerde.value},${nAzul.value})`
     }) 
+
+    const hexColor = computed(() => {
+        const toHex = (c) => {
+            const hex = c.toString(16)
+            return hex.length === 1 ? '0' + hex : hex
+        }
+        return `#${toHex(nVerm.value)}${toHex(nVerde.value)}${toHex(nAzul.value)}`
+    })
    </script>
 
 <style scoped>
