@@ -1,17 +1,20 @@
 <template>
     <div>
         <h1>Seletore de Cores</h1>
-        <div>
-            <label for="vermelho">Vermelho: </label>
-            <input type="number" v-model.number="nVerm" min="0" max="255"> 
-        </div>
-        <div>
-            <label for="verder">Verde: </label>
-            <input type="number" v-model.number="nVerde" min="0" max="255"> 
-        </div>
-        <div>
-            <label for="azul">Azul: </label>
-            <input type="number" v-model.number="nAzul" min="0" max="255"> 
+
+        <div class="cores">
+            <div>
+                <label for="vermelho">Vermelho: </label>
+                <input type="number" v-model.number="nVerm" min="0" max="255"> 
+            </div>
+            <div>
+                <label for="verder">Verde: </label>
+                <input type="number" v-model.number="nVerde" min="0" max="255"> 
+            </div>
+            <div>
+                <label for="azul">Azul: </label>
+                <input type="number" v-model.number="nAzul" min="0" max="255"> 
+            </div>
         </div>
 
         <div class="cor" :style="{backgroundColor: rgbColor}"></div>
@@ -51,6 +54,13 @@ import { computed, ref } from 'vue';
    </script>
 
 <style scoped>
+.cores {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
 div {
     text-align: center;
     font-family: Arial, sans-serif;
