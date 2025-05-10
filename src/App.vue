@@ -2,13 +2,15 @@
   <!-- <ContadorTeste/>
   <TextoDinaminco/>
   <ListadeTarefas/> -->
-  <SeletorCores/>
+  <!-- <SeletorCores/> -->
+   <MensagemP/>
 </template>
 
 <script>
 //import ContadorTeste from './components/ContadorTeste'
 //import ListadeTarefas from './components/ListadeTarefas.vue';
-import SeletorCores from './components/SeletorCores.vue';
+import MensagemP from './components/MensagemP.vue';
+//import SeletorCores from './components/SeletorCores.vue';
 //import TextoDinaminco from './components/TextoDinaminco.vue';
 
 export default {
@@ -17,7 +19,8 @@ export default {
     // ContadorTeste,
     // TextoDinaminco,
     // ListadeTarefas,
-    SeletorCores
+   // SeletorCores,
+   MensagemP
   }
 }
 </script>
