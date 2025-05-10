@@ -106,6 +106,7 @@ p {
      width: 120px;
      height: 120px; 
      border: 1px solid #ccc; 
+     border-radius: 20px;
      margin-top: 20px;
      margin: auto;
 }
