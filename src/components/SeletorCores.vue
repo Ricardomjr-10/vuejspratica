@@ -14,7 +14,7 @@
             <input type="number" v-model.number="nAzul" min="0" max="255"> 
         </div>
 
-        <div class="cor" :style="{backgroundColor: rgbColor}">Resultado:  {{ nVerm }} {{ nVerde }} {{ nAzul }}</div>
+        <div class="cor" :style="{backgroundColor: rgbColor}"></div>
     </div>
 </template>
     <script setup>
